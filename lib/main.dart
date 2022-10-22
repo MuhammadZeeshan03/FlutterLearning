@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './question.dart';
+import './Answer.dart';
 
 void main() => runApp(MyApp());
 
@@ -37,18 +38,9 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           children: [
             Question(questions[_questionIndex]),
-            ElevatedButton(
-              onPressed: _answerQuestion,
-              child: const Text('Answer 1'),
-            ),
-            ElevatedButton(
-              onPressed: _answerQuestion,
-              child: const Text('Answer 2'),
-            ),
-            ElevatedButton(
-              onPressed: _answerQuestion,
-              child: const Text('Answer 3'),
-            ),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
           ],
         ),
       ),
