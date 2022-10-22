@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
   final VoidCallback selectHandler;
-  Answer(this.selectHandler);
+  final String answerText;
+  Answer(this.selectHandler, String this.answerText);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,10 @@ class Answer extends StatelessWidget {
           side: getBorder(Color.fromARGB(193, 14, 204, 218), Colors.black54),
         ),
         onPressed: selectHandler,
-        child: Text('Answer 1'),
+        child: Text(
+          answerText,
+          style: TextStyle(fontSize: 20),
+        ),
       ),
     );
   }
